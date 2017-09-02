@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="brill_ideas_text">Brill ideas</string>
+    <string name="brill_ideas_count">Count</string>
+    <string name="level_value">Level value</string>
+</resources>

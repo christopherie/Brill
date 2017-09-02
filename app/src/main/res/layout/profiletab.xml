@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        app:srcCompat="@drawable/user_icon"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView4"
+        android:layout_marginTop="55dp"
+        android:layout_toStartOf="@+id/imageView4"
+        android:fontFamily="casual"
+        android:text="Brill ideas"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        tools:text="@string/brill_ideas_text" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignTop="@+id/textView"
+        android:layout_marginStart="54dp"
+        android:layout_toEndOf="@+id/textView"
+        android:fontFamily="casual"
+        android:text="Count"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:text="@string/brill_ideas_count" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="35dp"
+        android:layout_toStartOf="@+id/textView2"
+        android:fontFamily="casual"
+        android:text="Level"
+        android:textAlignment="viewStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        tools:text="@string/level_indicator_text" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_alignTop="@+id/textView3"
+        android:fontFamily="casual"
+        android:text="Level value"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:text="@string/level_value" />
+</RelativeLayout>

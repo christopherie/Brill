@@ -16,11 +16,13 @@
         android:layout_marginLeft="40dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="40dp"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp" />
 
     <EditText
         android:id="@+id/editText4"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -31,11 +33,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:text="@string/useremail_text" />
+        tools:text="@string/useremail_text"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp" />
 
     <EditText
         android:id="@+id/editText5"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -46,11 +50,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
-        tools:text="@string/userpassword_text" />
+        tools:text="@string/userpassword_text"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
@@ -59,5 +65,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText5"
-        tools:text="@string/login_button" />
+        tools:text="@string/login_button"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp" />
 </android.support.constraint.ConstraintLayout>

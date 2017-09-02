@@ -5,4 +5,12 @@
     <string name="username_text">User name</string>
     <string name="useremail_text">User email</string>
     <string name="userpassword_text">User password</string>
+    <string name="title_activity_idea_list">IdeaList</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="action_levels">Levels</string>
+    <string name="brill_ideas_text">Brill ideas</string>
+    <string name="brill_ideas_count">Count</string>
+    <string name="level_indicator_text">Level</string>
+    <string name="level_value">Level value</string>
 </resources>
