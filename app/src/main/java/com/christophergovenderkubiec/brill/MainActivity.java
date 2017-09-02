@@ -15,12 +15,21 @@ public class MainActivity extends AppCompatActivity {
 
         // Register and Login Intents
         final Button registerBtn = (Button)findViewById(R.id.button);
+        final Button loginBtn = (Button)findViewById(R.id.button2);
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent registerIntent = new Intent(MainActivity.this, Register.class);
                 startActivity(registerIntent);
+            }
+        });
+
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent loginIntent = new Intent(MainActivity.this, Login.class);
+                startActivity(loginIntent);
             }
         });
     }
