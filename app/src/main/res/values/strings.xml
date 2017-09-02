@@ -2,4 +2,7 @@
     <string name="app_name">Brill</string>
     <string name="register_button">Register</string>
     <string name="login_button">Login</string>
+    <string name="username_text">User name</string>
+    <string name="useremail_text">User email</string>
+    <string name="userpassword_text">User password</string>
 </resources>
