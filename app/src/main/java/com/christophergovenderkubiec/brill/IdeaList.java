@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class IdeaList extends AppCompatActivity {
@@ -105,7 +107,8 @@ public class IdeaList extends AppCompatActivity {
             View rootView = inflater.inflate(R.layout.fragment_idea_list, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
             textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
-            return rootView;
+
+            return textView;
         }
     }
 
