@@ -27,5 +27,4 @@ public class Locations extends Fragment {
         listView.setAdapter(listViewAdapter);
         return view;
     }
-
 }

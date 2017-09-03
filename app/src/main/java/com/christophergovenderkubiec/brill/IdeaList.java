@@ -1,8 +1,6 @@
 package com.christophergovenderkubiec.brill;
 
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.v4.app.Fragment;
@@ -15,10 +13,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class IdeaList extends AppCompatActivity {
 
@@ -66,14 +62,30 @@ public class IdeaList extends AppCompatActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        //int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+        //    return true;
+        //}
 
-        return super.onOptionsItemSelected(item);
+        //return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Toast.makeText(getApplicationContext(), "Settings view redirect",
+                        Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_levels:
+                Toast.makeText(getApplicationContext(), "Levels view redirect",
+                        Toast.LENGTH_SHORT).show();
+                return true;
+            case R.id.action_new_idea:
+                Intent addNewIdeaIntent = new Intent(IdeaList.this, AddIdea.class);
+                startActivity(addNewIdeaIntent);
+                return true;
+            default:
+                return false;
+        }
     }
 
     /**

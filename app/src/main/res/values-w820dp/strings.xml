@@ -4,4 +4,6 @@
     <string name="brill_ideas_count">Count</string>
     <string name="level_value">Level value</string>
     <string name="profile_text">Profile</string>
+    <string name="your_idea_text">Your idea</string>
+    <string name="save_idea_button">Save idea</string>
 </resources>
