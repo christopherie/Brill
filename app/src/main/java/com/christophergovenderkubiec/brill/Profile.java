@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 
 /**
@@ -16,6 +17,11 @@ public class Profile extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.profiletab, container, false);
+        View view = inflater.inflate(R.layout.profiletab, container, false);
+        TextView ideaCount = view.findViewById(R.id.textView3);
+        TextView userLevel = view.findViewById(R.id.textView5);
+        userLevel.setText("Beginner");
+        ideaCount.setText("45");
+        return view;
     }
 }

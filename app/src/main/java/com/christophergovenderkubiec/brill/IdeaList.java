@@ -135,8 +135,8 @@ public class IdeaList extends AppCompatActivity {
                     Ideas ideas = new Ideas();
                     return ideas;
                 case 2:
-                    Images images = new Images();
-                    return images;
+                    Locations locations = new Locations();
+                    return locations;
             }
             return null;
         }
