@@ -21,17 +21,17 @@ public class Ideas extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.ideastab, container, false);
         String[] items = {"Create a view", "Add adapter"};
-        ListView listView = (ListView) view.findViewById(R.id.listView);
+        ListView listView = view.findViewById(R.id.listView);
 
-        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> listViewAdapter = new ArrayAdapter<>(
                 getActivity(),
                 android.R.layout.simple_list_item_1,
                 items
         );
         listView.setAdapter(listViewAdapter);
 
+
         return view;
     }
-
 
 }
