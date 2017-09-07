@@ -16,8 +16,8 @@ public class AddIdea extends AppCompatActivity {
         saveIdeaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent saveIdeaIntent = new Intent(AddIdea.this, AddLocation.class);
-                //startActivity(saveIdeaIntent);
+                Intent saveIdeaIntent = new Intent(AddIdea.this, GetLocation.class);
+                startActivity(saveIdeaIntent);
             }
         });
     }

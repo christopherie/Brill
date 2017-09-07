@@ -17,4 +17,6 @@
     <string name="profile_text">Profile</string>
     <string name="your_idea_text">Your idea</string>
     <string name="save_idea_button">Save idea</string>
+    <string name="place_picker_text">Get location</string>
+    <string name="get_location">Get location</string>
 </resources>

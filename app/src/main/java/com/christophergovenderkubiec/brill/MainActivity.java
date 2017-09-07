@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         // Register and Login Intents
         final Button registerBtn = (Button)findViewById(R.id.button);
         final Button loginBtn = (Button)findViewById(R.id.button2);
