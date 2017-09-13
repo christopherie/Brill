@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.christophergovenderkubiec.brill.IdeaList">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_view_idea_list"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="View ideas"
         app:showAsAction="never" />
     <item
-        android:id="@+id/action_levels"
+        android:id="@+id/action_view_locations_list"
         android:orderInCategory="100"
-        android:title="@string/action_levels"
+        android:title="Locations"
         app:showAsAction="never" />
     <item
         android:id="@+id/action_new_idea"

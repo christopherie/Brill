@@ -71,12 +71,12 @@ public class IdeaList extends AppCompatActivity {
 
         //return super.onOptionsItemSelected(item);
         switch (item.getItemId()) {
-            case R.id.action_settings:
-                Toast.makeText(getApplicationContext(), "Settings view redirect",
-                        Toast.LENGTH_SHORT).show();
+            case R.id.action_view_idea_list:
+                Intent viewIdeas = new Intent(IdeaList.this, ListDataActivity.class);
+                startActivity(viewIdeas);
                 return true;
-            case R.id.action_levels:
-                Toast.makeText(getApplicationContext(), "Levels view redirect",
+            case R.id.action_view_locations_list:
+                Toast.makeText(getApplicationContext(), "Going to Locations",
                         Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.action_new_idea:

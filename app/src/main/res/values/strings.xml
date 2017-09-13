@@ -7,6 +7,8 @@
     <string name="userpassword_text">User password</string>
     <string name="title_activity_idea_list">IdeaList</string>
     <string name="action_settings">Settings</string>
+    <string name="action_view_idea_list">View ideas</string>
+    <string name="action_view_locations_list">View locations</string>
     <string name="action_new_idea">New idea</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="action_levels">Levels</string>
