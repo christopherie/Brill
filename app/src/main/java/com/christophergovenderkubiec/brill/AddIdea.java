@@ -18,6 +18,7 @@ public class AddIdea extends AppCompatActivity {
             public void onClick(View view) {
                 Intent saveIdeaIntent = new Intent(AddIdea.this, GetLocation.class);
                 startActivity(saveIdeaIntent);
+		        
             }
         });
     }

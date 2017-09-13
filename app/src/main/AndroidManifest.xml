@@ -26,7 +26,7 @@
             android:label="@string/title_activity_idea_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".AddIdea" />
-        <activity android:name=".GetLocation"></activity>
+        <activity android:name=".GetLocation" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
