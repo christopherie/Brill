@@ -23,11 +23,7 @@ public class Profile extends Fragment  {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.profiletab, container, false);
-        TextView ideaCount = view.findViewById(R.id.textView3);
-        TextView userLevel = view.findViewById(R.id.textView5);
 
-        userLevel.setText("Beginner");
-        ideaCount.setText("1");
         return view;
     }
 }

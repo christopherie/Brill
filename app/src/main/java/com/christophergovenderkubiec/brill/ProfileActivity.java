@@ -24,5 +24,8 @@ public class ProfileActivity extends AppCompatActivity {
         int data = databaseOpenHelper.countIdeas();
         databaseOpenHelper.close();
         ideaCount.setText(String.valueOf(data));
+        if (String.valueOf(data).length() < 50) {
+            userLevel.setText(String.valueOf("Beginner"));
+        }
     }
 }

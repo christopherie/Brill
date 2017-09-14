@@ -8,4 +8,8 @@
     <string name="save_idea_button">Save idea</string>
     <string name="place_picker_text">Get location</string>
     <string name="get_location">Get location</string>
+    <string name="add_an_idea">Add a Brill idea</string>
+    <string name="add_your_location">Add your location</string>
+    <string name="track_your_progress">Track your productivity</string>
+    <string name="brill_intro">Excellent; marvellous.</string>
 </resources>

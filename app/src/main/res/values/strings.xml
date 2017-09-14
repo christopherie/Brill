@@ -28,4 +28,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="action_take_picture">Take picture</string>
     <string name="action_view_profile">Your profile</string>
+    <string name="add_an_idea">Add a Brill idea</string>
+    <string name="add_your_location">Add your location</string>
+    <string name="track_your_progress">Track your productivity</string>
+    <string name="brill_intro">Excellent; marvellous.</string>
 </resources>
