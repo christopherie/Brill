@@ -32,7 +32,8 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAsiaiSRSQitdVhS-qxVR3mPtU00Vq4o34" />
 
-        <activity android:name=".ListDataActivity"></activity>
+        <activity android:name=".ListDataActivity" />
+        <activity android:name=".TakePicture"></activity>
     </application>
 
 </manifest>

@@ -62,4 +62,10 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         Cursor data = db.rawQuery(query, null);
         return data;
     }
+
+    public int countIdeas() {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.rawQuery("SELECT COUNT(*) FROM " + TABLE_NAME, null).getCount();
+    }
 }

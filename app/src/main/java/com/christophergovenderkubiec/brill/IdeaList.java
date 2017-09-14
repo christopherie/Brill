@@ -83,6 +83,10 @@ public class IdeaList extends AppCompatActivity {
                 Intent addNewIdeaIntent = new Intent(IdeaList.this, AddIdea.class);
                 startActivity(addNewIdeaIntent);
                 return true;
+            case R.id.action_picture:
+                Intent takePicture = new Intent(IdeaList.this, TakePicture.class);
+                startActivity(takePicture);
+                return true;
             default:
                 return false;
         }
