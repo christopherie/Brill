@@ -33,7 +33,8 @@
             android:value="AIzaSyAsiaiSRSQitdVhS-qxVR3mPtU00Vq4o34" />
 
         <activity android:name=".ListDataActivity" />
-        <activity android:name=".TakePicture"></activity>
+        <activity android:name=".TakePicture" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

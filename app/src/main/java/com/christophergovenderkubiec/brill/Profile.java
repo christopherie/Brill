@@ -18,6 +18,7 @@ import android.widget.TextView;
 // public class Profile extends Fragment
 public class Profile extends Fragment  {
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
