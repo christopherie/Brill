@@ -16,6 +16,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
     final static String IDEA = "idea";
     final static String LOCATION = "location";
     final static String ID = "id";
+    long lastInsertId;
 
     // Create table
     final private static String CREATE_CMD =
@@ -53,9 +54,11 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         if (result == -1) {
             return false;
         } else {
+            lastInsertId = result;
             return true;
         }
     }
+
 
     // Get all ideas to populate list view
     public Cursor getIdeas() {
@@ -73,5 +76,18 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         int count = data.getCount();
         data.close();
         return count;
+    }
+
+    // Add Location
+    public boolean addLocation(String item) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(LOCATION, item);
+        long result = db.update(TABLE_NAME, contentValues, "ID="+lastInsertId, null);
+        if (result == -1) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

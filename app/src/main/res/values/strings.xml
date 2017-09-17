@@ -34,4 +34,5 @@
     <string name="brill_intro">Excellent; marvellous.</string>
     <string name="brill_tagline">The best idea tracking app for Entrpreneurs</string>
     <string name="swipe_left_text">Swipe left</string>
+    <string name="save_location_btn">Save location</string>
 </resources>

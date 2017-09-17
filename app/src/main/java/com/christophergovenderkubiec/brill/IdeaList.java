@@ -38,7 +38,7 @@ public class IdeaList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_idea_list);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("How Brill works");
         // Create the adapter that will return a fragment for each of the three
@@ -46,7 +46,7 @@ public class IdeaList extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
     }
 
@@ -65,10 +65,6 @@ public class IdeaList extends AppCompatActivity {
             case R.id.action_view_idea_list:
                 Intent viewIdeas = new Intent(IdeaList.this, ListDataActivity.class);
                 startActivity(viewIdeas);
-                return true;
-            case R.id.action_view_locations_list:
-                Toast.makeText(getApplicationContext(), "Going to Locations",
-                        Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.action_new_idea:
                 Intent addNewIdeaIntent = new Intent(IdeaList.this, AddIdea.class);

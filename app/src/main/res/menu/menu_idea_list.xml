@@ -7,11 +7,7 @@
         android:orderInCategory="100"
         android:title="View ideas"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/action_view_locations_list"
-        android:orderInCategory="100"
-        android:title="Locations"
-        app:showAsAction="never" />
+
     <item
         android:id="@+id/action_new_idea"
         android:orderInCategory="100"

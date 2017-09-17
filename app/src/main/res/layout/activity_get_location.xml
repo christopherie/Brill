@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="200dp"
         android:fontFamily="casual"
         android:text="Get location"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -21,4 +21,19 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/get_location" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="213dp"
+        android:fontFamily="casual"
+        android:text="Save location"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        tools:text="@string/save_location_btn" />
 </android.support.constraint.ConstraintLayout>

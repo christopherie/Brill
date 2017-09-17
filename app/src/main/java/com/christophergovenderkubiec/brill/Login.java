@@ -36,7 +36,6 @@ public class Login extends AppCompatActivity {
 
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(Login.this, IdeaList.class));
-            //finish();
         }
 
         setContentView(R.layout.activity_login);

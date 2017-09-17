@@ -20,7 +20,7 @@ public class ListDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_data);
         listView = findViewById(R.id.list_data);
         databaseOpenHelper = new DatabaseOpenHelper(this);
-
+        // Put data into listview
         populateListView();
     }
 

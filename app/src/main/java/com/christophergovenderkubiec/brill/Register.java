@@ -40,38 +40,42 @@ public class Register extends AppCompatActivity {
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = inputEmail.getText().toString().trim();
-                String password = inputPassword.getText().toString().trim();
+            String email = inputEmail.getText().toString().trim();
+            String password = inputPassword.getText().toString().trim();
 
-                if (TextUtils.isEmpty(email)) {
-                    Toasty.error(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+            if (TextUtils.isEmpty(email)) {
+                Toasty.error(getApplicationContext(), "Enter email address!",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-                if (TextUtils.isEmpty(password)) {
-                    Toasty.error(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+            if (TextUtils.isEmpty(password)) {
+                Toasty.error(getApplicationContext(), "Enter password!",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-                if (password.length() < 6) {
-                    Toasty.warning(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+            if (password.length() < 6) {
+                Toasty.warning(getApplicationContext(),
+                        "Password too short, enter minimum 6 characters!",
+                        Toast.LENGTH_SHORT).show();
+                return;
+            }
 
-                //create user
+            //create user
 
-                auth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (!task.isSuccessful()) {
-                            Toasty.error(Register.this, "Authentication failed." + task.getException(),
-                                    Toast.LENGTH_SHORT).show();
-                        } else {
-                            startActivity(new Intent(Register.this, Login.class));
-                        }
+            auth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(Register.this, new OnCompleteListener<AuthResult>() {
+                @Override
+                public void onComplete(@NonNull Task<AuthResult> task) {
+                    if (!task.isSuccessful()) {
+                        Toasty.error(Register.this, "Authentication failed." + task.getException(),
+                                Toast.LENGTH_SHORT).show();
+                    } else {
+                        startActivity(new Intent(Register.this, Login.class));
                     }
-                });
+                }
+            });
             }
         });
     }
