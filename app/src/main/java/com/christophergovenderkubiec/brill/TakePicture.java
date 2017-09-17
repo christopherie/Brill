@@ -19,8 +19,8 @@ public class TakePicture extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_picture);
-        cameraBtn = (Button)findViewById(R.id.camera_btn);
-        imageView = (ImageView)findViewById(R.id.camera_image_view);
+        cameraBtn = findViewById(R.id.camera_btn);
+        imageView = findViewById(R.id.camera_image_view);
         cameraBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

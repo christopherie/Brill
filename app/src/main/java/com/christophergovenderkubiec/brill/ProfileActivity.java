@@ -13,13 +13,14 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        ideaCount = (TextView)findViewById(R.id.textView8);
+        ideaCount = findViewById(R.id.textView8);
         userLevel = findViewById(R.id.textView9);
         databaseOpenHelper = new DatabaseOpenHelper(this);
         populateIdeaCount();
 
     }
 
+    // Populate idea count text field
     private void populateIdeaCount() {
         int data = databaseOpenHelper.countIdeas();
         databaseOpenHelper.close();

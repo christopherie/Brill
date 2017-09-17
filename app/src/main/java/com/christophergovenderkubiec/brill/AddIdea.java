@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import es.dmoral.toasty.Toasty;
+
 public class AddIdea extends AppCompatActivity {
 
     DatabaseOpenHelper databaseOpenHelper;
@@ -18,8 +20,8 @@ public class AddIdea extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_idea);
-        editText = (EditText)findViewById(R.id.editText6);
-        saveIdeaBtn = (Button)findViewById(R.id.button5);
+        editText = findViewById(R.id.editText6);
+        saveIdeaBtn = findViewById(R.id.button5);
         databaseOpenHelper = new DatabaseOpenHelper(this);
         saveIdeaBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +34,8 @@ public class AddIdea extends AppCompatActivity {
                 startActivity(saveIdeaIntent);
                 finish();
             } else {
-                toastMessage("You must add an idea!");
+                // Toasty error
+                Toasty.warning(AddIdea.this, "You must add an idea", Toast.LENGTH_SHORT, true).show();
             }
             }
         });
@@ -41,13 +44,11 @@ public class AddIdea extends AppCompatActivity {
     public void AddIdea(String newIdea) {
         boolean insertIdea = databaseOpenHelper.addIdea(newIdea);
         if (insertIdea) {
-            toastMessage("Idea saved!");
+            // Toasty success
+            Toasty.success(AddIdea.this, "Idea saved", Toast.LENGTH_SHORT, true).show();
         } else {
-            toastMessage("Idea not saved!");
+            // Toasty error
+            Toasty.error(AddIdea.this, "Idea not saved", Toast.LENGTH_SHORT, true).show();
         }
-    }
-
-    private void toastMessage(String message) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 }

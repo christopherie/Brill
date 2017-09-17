@@ -12,29 +12,38 @@
         android:roundIcon="@drawable/brill_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Register" />
-        <activity android:name=".Login" />
+        <activity android:name=".Register"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Login"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".IdeaList"
             android:label="@string/title_activity_idea_list"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AddIdea" />
-        <activity android:name=".GetLocation" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AddIdea"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".GetLocation"
+            android:screenOrientation="portrait"/>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAsiaiSRSQitdVhS-qxVR3mPtU00Vq4o34" />
 
-        <activity android:name=".ListDataActivity" />
-        <activity android:name=".TakePicture" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ListDataActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".TakePicture"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ProfileActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

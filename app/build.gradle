@@ -30,6 +30,7 @@ dependencies {
     compile 'com.google.android.gms:play-services:11.2.2'
     compile 'com.google.firebase:firebase-auth:11.2.2'
     compile 'com.android.support:support-v4:26.+'
+    compile 'com.github.GrenderG:Toasty:1.2.5'
     testCompile 'junit:junit:4.12'
 }
 

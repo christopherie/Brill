@@ -17,6 +17,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import es.dmoral.toasty.Toasty;
+
 public class Register extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
@@ -30,9 +32,9 @@ public class Register extends AppCompatActivity {
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
 
-        final Button registerBtn = (Button)findViewById(R.id.button3);
-        inputEmail = (EditText) findViewById(R.id.editText2);
-        inputPassword = (EditText) findViewById(R.id.editText3);
+        final Button registerBtn = findViewById(R.id.button3);
+        inputEmail = findViewById(R.id.editText2);
+        inputPassword = findViewById(R.id.editText3);
 
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
@@ -42,17 +44,17 @@ public class Register extends AppCompatActivity {
                 String password = inputPassword.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
+                    Toasty.error(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
+                    Toasty.error(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 if (password.length() < 6) {
-                    Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+                    Toasty.warning(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -63,7 +65,7 @@ public class Register extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (!task.isSuccessful()) {
-                            Toast.makeText(Register.this, "Authentication failed." + task.getException(),
+                            Toasty.error(Register.this, "Authentication failed." + task.getException(),
                                     Toast.LENGTH_SHORT).show();
                         } else {
                             startActivity(new Intent(Register.this, Login.class));

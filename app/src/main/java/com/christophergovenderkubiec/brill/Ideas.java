@@ -19,7 +19,6 @@ public class Ideas extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.ideastab, container, false);
-
         return view;
     }
 }

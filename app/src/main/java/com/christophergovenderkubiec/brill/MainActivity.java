@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Register and Login Intents
-        final Button registerBtn = (Button)findViewById(R.id.button);
-        final Button loginBtn = (Button)findViewById(R.id.button2);
+        final Button registerBtn = findViewById(R.id.button);
+        final Button loginBtn = findViewById(R.id.button2);
 
         registerBtn.setOnClickListener(new View.OnClickListener() {
             @Override

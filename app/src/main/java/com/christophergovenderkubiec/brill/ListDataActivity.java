@@ -18,7 +18,7 @@ public class ListDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_data);
-        listView = (ListView)findViewById(R.id.list_data);
+        listView = findViewById(R.id.list_data);
         databaseOpenHelper = new DatabaseOpenHelper(this);
 
         populateListView();

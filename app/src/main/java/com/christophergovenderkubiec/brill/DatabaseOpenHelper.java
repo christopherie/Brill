@@ -44,6 +44,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
+    // Add idea
     public boolean addIdea(String item) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -56,6 +57,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         }
     }
 
+    // Get all ideas to populate list view
     public Cursor getIdeas() {
         SQLiteDatabase db = this.getWritableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME;
@@ -63,6 +65,7 @@ public class DatabaseOpenHelper extends SQLiteOpenHelper {
         return data;
     }
 
+    // Count ideas to populate Profileactivity text field
     public int countIdeas() {
         SQLiteDatabase db = this.getReadableDatabase();
         String query = "SELECT * FROM " + TABLE_NAME;

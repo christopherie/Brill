@@ -12,4 +12,6 @@
     <string name="add_your_location">Add your location</string>
     <string name="track_your_progress">Track your productivity</string>
     <string name="brill_intro">Excellent; marvellous.</string>
+    <string name="brill_tagline">The best idea tracking app for Entrepreneurs</string>
+    <string name="swipe_left_text">Swipe left</string>
 </resources>

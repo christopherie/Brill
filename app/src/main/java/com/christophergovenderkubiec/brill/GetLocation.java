@@ -20,7 +20,7 @@ public class GetLocation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_location);
-        getPlace = (TextView)findViewById(R.id.textView6);
+        getPlace = findViewById(R.id.textView6);
         getPlace.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

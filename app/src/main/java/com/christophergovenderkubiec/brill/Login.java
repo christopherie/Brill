@@ -18,6 +18,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import es.dmoral.toasty.Toasty;
+
 
 public class Login extends AppCompatActivity {
 
@@ -39,9 +41,9 @@ public class Login extends AppCompatActivity {
 
         setContentView(R.layout.activity_login);
 
-        inputEmail = (EditText)findViewById(R.id.editText4);
-        inputPassword = (EditText)findViewById(R.id.editText5);
-        loginBtn = (Button)findViewById(R.id.button4);
+        inputEmail = findViewById(R.id.editText4);
+        inputPassword = findViewById(R.id.editText5);
+        loginBtn = findViewById(R.id.button4);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,14 +51,14 @@ public class Login extends AppCompatActivity {
             final String password = inputPassword.getText().toString().trim();
 
             if (TextUtils.isEmpty(email)) {
-                Toast.makeText(getApplicationContext(), "Enter email address!",
-                        Toast.LENGTH_SHORT).show();
+                Toasty.warning(getApplicationContext(), "Enter email address",
+                        Toast.LENGTH_SHORT, true).show();
                 return;
             }
 
             if (TextUtils.isEmpty(password)) {
-                Toast.makeText(getApplicationContext(), "Enter password!",
-                        Toast.LENGTH_SHORT).show();
+                Toasty.warning(getApplicationContext(), "Enter password",
+                        Toast.LENGTH_SHORT, true).show();
                 return;
             }
 
@@ -67,18 +69,18 @@ public class Login extends AppCompatActivity {
             .addOnCompleteListener(Login.this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if (!task.isSuccessful()) {
-                        // there was an error
-                        if (password.length() < 6) {
-                            inputPassword.setError(getString(R.string.minimum_password));
-                        } else {
-                            Toast.makeText(Login.this, getString(R.string.auth_failed),
-                                    Toast.LENGTH_LONG).show();
-                        }
+                if (!task.isSuccessful()) {
+                    // there was an error
+                    if (password.length() < 6) {
+                        inputPassword.setError(getString(R.string.minimum_password));
                     } else {
-                        Intent intent = new Intent(Login.this, IdeaList.class);
-                        startActivity(intent);
+                        Toasty.error(Login.this, getString(R.string.auth_failed),
+                                Toast.LENGTH_LONG).show();
                     }
+                } else {
+                    Intent intent = new Intent(Login.this, IdeaList.class);
+                    startActivity(intent);
+                }
                 }
             });
             }
